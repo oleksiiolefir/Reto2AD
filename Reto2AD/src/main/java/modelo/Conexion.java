@@ -37,12 +37,13 @@ public class Conexion {
 		/*this.host = "localhost";
 		this.bd = "reto2";
 		this.usuario = "grupo2";
-		this.contrasena = "grupo2";*/
+		this.contrasena = "grupo2"; */
 		host = datos[0];
 		bd = datos[1];
 		usuario = datos[2];
 		contrasena = datos[3];
-		this.url = "jdbc:mysql://"+host+":3306/"+bd+"?"+params;
+		this.url = "jdbc:mysql://localhost:3306/"+bd+"?"+params;
+		
 	}
 	
 	/**
@@ -75,6 +76,7 @@ public class Conexion {
 				datos[count] = linea.substring(linea.indexOf(":") + 2);
 				count++;
 			}
+			
 		} catch (IOException e) {
 			e.printStackTrace();
 		} 
@@ -92,6 +94,7 @@ public class Conexion {
 		try {
 			
 			connection = DriverManager.getConnection(this.url, this.usuario , this.contrasena); 
+			System.out.println("JON ES UN CRACK ");
 		} 
 		catch (SQLException e) { 
 			
