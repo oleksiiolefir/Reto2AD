@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
+
 import javax.swing.JOptionPane;
 
 
@@ -34,9 +35,9 @@ public class Conexion {
 		
 		this.connection = null;
 		/*this.host = "localhost";
-		this.bd = "reto4";
-		this.usuario = "grupo4";
-		this.contrasena = "grupo4";*/
+		this.bd = "reto2";
+		this.usuario = "grupo2";
+		this.contrasena = "grupo2";*/
 		host = datos[0];
 		bd = datos[1];
 		usuario = datos[2];
