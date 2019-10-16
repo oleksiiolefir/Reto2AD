@@ -1,76 +1,40 @@
 package modelo;
 
-import java.io.File;
-import java.io.FileWriter;
-import java.io.PrintWriter;
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class lectorTXT {
-	public static String funcionDeLectorDeTxt(String archivo) {	
-		// Fichero del que queremos leer
-				File fichero = new File(archivo);
-				Scanner s = null;
-				String linea = "";
- 
-				try {
-					// Leemos el contenido del fichero
-					//System.out.println("... Leemos el contenido del fichero ...");
-					s = new Scanner(fichero);
+	public String[] lecturaTXT() {
 
-					// Leemos linea a linea el fichero
-					while (s.hasNextLine()) 
-					{
-						linea = s.nextLine(); 	// Guardamos la linea en un String
-						System.out.println(linea);      // Imprimimos la linea
-						return linea;
-					}
-
-				} 
-				catch (Exception ex) 
-				{
-					System.out.println("Mensaje: " + ex.getMessage());
-				} 
-				finally
-				{
-					// Cerramos el fichero tanto si la lectura ha sido correcta o no
-					try 
-					{
-						if (s != null)
-							s.close();
-						} catch (Exception ex2) 
-					{
-						System.out.println("Mensaje 2: " + ex2.getMessage());
-						return  ex2.getMessage();
-					}
-				}
-				return linea;
+		String filePath = "datos.txt";
+		FileReader fileReader = null;
+		BufferedReader buffer = null;
+		String[] datos = new String[4];
+		String linea = "";
+		int count = 0;
+		
+		// carga el archivo de datos en un buffer
+		try {
+			fileReader = new FileReader(filePath);
+			buffer = new BufferedReader(fileReader);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} 
+		  
+		// recorre el buffer leyendo de cada linea del archivo el substring
+		// necesario y lo guarda en una entrada del array
+		try {
+			while ((linea = buffer.readLine()) != null) {
+				datos[count] = linea.substring(linea.indexOf(":") + 2);
+				count++;
 			}
-	
-	
-	public static void escritorTXT(String archivo)
-    {
-        FileWriter fichero = null;
-        PrintWriter pw = null;
-        try
-        {
-            fichero = new FileWriter(archivo);
-            pw = new PrintWriter(fichero);
-
-            for (int i = 0; i < 10; i++)
-                pw.println("Linea " + i);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        } finally {
-           try {
-           // Nuevamente aprovechamos el finally para 
-           // asegurarnos que se cierra el fichero.
-           if (null != fichero)
-              fichero.close();
-           } catch (Exception e2) {
-              e2.printStackTrace();
-           }
-        }
-    }
-
+		} catch (IOException e) {
+			e.printStackTrace();
+		} 
+		
+		return datos;
+		
+	}
 }
