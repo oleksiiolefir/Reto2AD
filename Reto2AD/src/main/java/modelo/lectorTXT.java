@@ -6,12 +6,13 @@ import java.io.FileReader;
 import java.io.IOException;
 
 public class lectorTXT {
-	public String[] lecturaTXT() {
+	public static String[] lecturaTXT() {
 
+		
 		String filePath = "datos.txt";
 		FileReader fileReader = null;
 		BufferedReader buffer = null;
-		String[] datos = new String[4];
+		String[] datos = new String[6];
 		String linea = "";
 		int count = 0;
 		
