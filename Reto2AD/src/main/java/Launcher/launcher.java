@@ -10,9 +10,7 @@ public class launcher {
 	
 	public static void main(String[] args) throws IOException {
 		Conexion c = new Conexion();
-		c.conectar();
-
-		
+		c.conectar();		
 		
 		lecturaCSV.funcionesDeLectorCsv(archivoCsv);
 

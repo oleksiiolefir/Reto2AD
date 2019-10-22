@@ -8,6 +8,7 @@ import javax.swing.JButton;
 public class Menu {
 
 	private JFrame frame;
+	private JButton btnNewButton, btnConsultarUsuarios, btnCrearNuevoDepartamento, btnConsultarDepartamentos;
 
 	/**
 	 * Launch the application.
@@ -41,19 +42,19 @@ public class Menu {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JButton btnNewButton = new JButton("Crear nuevo usuario");
+		btnNewButton = new JButton("Crear nuevo usuario");
 		btnNewButton.setBounds(144, 84, 263, 48);
 		frame.getContentPane().add(btnNewButton);
 		
-		JButton btnConsultarUsuarios = new JButton("Consultar usuarios");
+		btnConsultarUsuarios = new JButton("Consultar usuarios");
 		btnConsultarUsuarios.setBounds(144, 143, 263, 48);
 		frame.getContentPane().add(btnConsultarUsuarios);
 		
-		JButton btnCrearNuevoDepartamento = new JButton("Crear nuevo departamento");
+		btnCrearNuevoDepartamento = new JButton("Crear nuevo departamento");
 		btnCrearNuevoDepartamento.setBounds(144, 199, 263, 48);
 		frame.getContentPane().add(btnCrearNuevoDepartamento);
 		
-		JButton btnConsultarDepartamentos = new JButton("Consultar departamentos");
+		btnConsultarDepartamentos = new JButton("Consultar departamentos");
 		btnConsultarDepartamentos.setBounds(144, 258, 263, 48);
 		frame.getContentPane().add(btnConsultarDepartamentos);
 	}

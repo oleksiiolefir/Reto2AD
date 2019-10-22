@@ -9,14 +9,8 @@ import javax.swing.JTextField;
 public class CrearUsuario {
 
 	private JFrame frame;
-	private JTextField tfCodEmple;
-	private JTextField tfNombre;
-	private JTextField tfApellido;
-	private JTextField tfSueldo;
-	private JTextField tfDeptEmple;
-	private JTextField tfCargo;
-	private JTextField tfJefe;
-	private JTextField tfJefeAsig;
+	private JTextField tfCodEmple, tfNombre, tfApellido, tfSueldo, tfDeptEmple, tfCargo, tfJefe, tfJefeAsig;
+	private JLabel lblCodigoDeEmpleado, lblNombre, lblPrimerApellido, lblSueldo, lblDepartamentoDelEmpleado, lblCargoDelEmpleado, lbltieneAAlguien, lblJefeAsignado;
 
 	/**
 	 * Launch the application.
@@ -50,31 +44,31 @@ public class CrearUsuario {
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JLabel lblCodigoDeEmpleado = new JLabel("Codigo de empleado: ");
+		lblCodigoDeEmpleado = new JLabel("Codigo de empleado: ");
 		lblCodigoDeEmpleado.setBounds(10, 12, 137, 19);
 		frame.getContentPane().add(lblCodigoDeEmpleado);
 		
-		JLabel lblNombre = new JLabel("Nombre: ");
+		lblNombre = new JLabel("Nombre: ");
 		lblNombre.setBounds(10, 42, 137, 19);
 		frame.getContentPane().add(lblNombre);
 		
-		JLabel lblPrimerApellido = new JLabel("Primer apellido: ");
+		lblPrimerApellido = new JLabel("Primer apellido: ");
 		lblPrimerApellido.setBounds(10, 72, 137, 19);
 		frame.getContentPane().add(lblPrimerApellido);
 		
-		JLabel lblSueldo = new JLabel("Sueldo: ");
+		lblSueldo = new JLabel("Sueldo: ");
 		lblSueldo.setBounds(10, 102, 137, 19);
 		frame.getContentPane().add(lblSueldo);
 		
-		JLabel lblDepartamentoDelEmpleado = new JLabel("Departamento del empleado: ");
+		lblDepartamentoDelEmpleado = new JLabel("Departamento del empleado: ");
 		lblDepartamentoDelEmpleado.setBounds(10, 132, 153, 19);
 		frame.getContentPane().add(lblDepartamentoDelEmpleado);
 		
-		JLabel lblCargoDelEmpleado = new JLabel("Cargo del empleado: ");
+		lblCargoDelEmpleado = new JLabel("Cargo del empleado: ");
 		lblCargoDelEmpleado.setBounds(10, 162, 137, 19);
 		frame.getContentPane().add(lblCargoDelEmpleado);
 		
-		JLabel lbltieneAAlguien = new JLabel("\u00BFTiene a alguien a cargo? (Si/No)");
+		lbltieneAAlguien = new JLabel("\u00BFTiene a alguien a cargo? (Si/No)");
 		lbltieneAAlguien.setBounds(10, 192, 164, 19);
 		frame.getContentPane().add(lbltieneAAlguien);
 		
@@ -113,7 +107,7 @@ public class CrearUsuario {
 		tfJefe.setBounds(245, 191, 120, 19);
 		frame.getContentPane().add(tfJefe);
 		
-		JLabel lblJefeAsignado = new JLabel("Jefe asignado: ");
+		lblJefeAsignado = new JLabel("Jefe asignado: ");
 		lblJefeAsignado.setBounds(10, 223, 164, 19);
 		frame.getContentPane().add(lblJefeAsignado);
 		
