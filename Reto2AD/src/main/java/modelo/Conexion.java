@@ -94,7 +94,7 @@ public class Conexion {
 		try {
 			
 			connection = DriverManager.getConnection(this.url, this.usuario , this.contrasena); 
-			System.out.println("JON ES UN CRACK ");
+			System.out.println("HACE LA CONEXION ");
 		} 
 		catch (SQLException e) { 
 			

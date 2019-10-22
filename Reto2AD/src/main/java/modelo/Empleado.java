@@ -3,15 +3,21 @@ package modelo;
 public class Empleado {
 	private int id;
 	private String nombre;
+	private String apellido;
+	private int sueldo;
 	private int boss;
 	private int cod_dept;
 	private Boolean jefe;
 	private String puesto;
-	
-	public Empleado(int id, String nombre, int boss, int cod_dept, Boolean jefe, String puesto) {		
+	public Empleado() {
+		
+	}
+	public Empleado(int id, String nombre,String apellido,int sueldo, int boss, int cod_dept, Boolean jefe, String puesto) {		
 		super();
 		this.id = id;
 		this.nombre = nombre;
+		this.setApellido(apellido);
+		this.setSueldo(sueldo);
 		this.boss = boss;
 		this.cod_dept = cod_dept;
 		this.jefe = jefe;
@@ -30,6 +36,21 @@ public class Empleado {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
+	public String getApellido() {
+		return apellido;
+	}
+
+	public void setApellido(String apellido) {
+		this.apellido = apellido;
+	}
+	public int getSueldo() {
+		return sueldo;
+	}
+
+	public void setSueldo(int sueldo) {
+		this.sueldo = sueldo;
+	}
+
 	public int getBoss() {
 		return boss;
 	}
@@ -54,5 +75,8 @@ public class Empleado {
 	public void setPuesto(String puesto) {
 		this.puesto = puesto;
 	}
+
+	
+	
 
 }

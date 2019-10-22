@@ -12,7 +12,7 @@ public class lectorTXT {
 		String filePath = "datos.txt";
 		FileReader fileReader = null;
 		BufferedReader buffer = null;
-		String[] datos = new String[6];
+		String[] datos = new String[8];
 		String linea = "";
 		int count = 0;
 		
