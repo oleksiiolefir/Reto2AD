@@ -1,6 +1,1 @@
- 0001
- Alosha
- 2
- 0004
- TRUE
- Matematicas
+0001;Alosha;Oleksii;1340;2;0004;TRUE;Matematicas
