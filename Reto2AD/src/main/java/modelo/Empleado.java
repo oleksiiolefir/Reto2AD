@@ -4,9 +4,11 @@ public class Empleado {
 	private int id;
 	private String nombre;
 	private int boss;
-	private int cod_dept;	
+	private int cod_dept;
+	private Boolean jefe;
+	private String puesto;
 	
-	public Empleado(int id, String nombre, int boss, int cod_dept, Boolean jefe, String puesto) {
+	public Empleado(int id, String nombre, int boss, int cod_dept, Boolean jefe, String puesto) {		
 		super();
 		this.id = id;
 		this.nombre = nombre;
@@ -52,6 +54,5 @@ public class Empleado {
 	public void setPuesto(String puesto) {
 		this.puesto = puesto;
 	}
-	private Boolean jefe;
-	private String puesto;
+
 }

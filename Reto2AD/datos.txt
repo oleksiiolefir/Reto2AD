@@ -1,0 +1,6 @@
+ 0001
+ Alosha
+ 2
+ 0004
+ TRUE
+ Matematicas
