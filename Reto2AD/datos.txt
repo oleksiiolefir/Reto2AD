@@ -1,8 +1,2 @@
- 0003
- Lander
- Olefir
- 1344
- 2
- 10
- TRUE
- Matematicas
+0001;Alosha;Oleksii;1340;2;0004;TRUE;Matematicas
+

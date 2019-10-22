@@ -12,12 +12,10 @@ public class launcher {
 	public static void main(String[] args) throws IOException {
 		
 		Conexion c = new Conexion();
+
 		c.conectar();
 
 		Consultas consult = new Consultas(c);
-		
-		
-		
 		
 	//	lecturaCSV.funcionesDeLectorCsv(archivoCsv);
 

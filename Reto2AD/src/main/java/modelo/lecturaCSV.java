@@ -35,8 +35,7 @@ public class lecturaCSV {
 
 					line = br.readLine();
 
-				}
-				
+				}				
 				
 			}
    
