@@ -69,7 +69,7 @@ public class Consultas {
 			
 			String query;
 		
-			query = "INSERT INTO empleado (ID, NOMBRE, APELLIDOS, SUELDO, BOSS, COD_DEPT, JEFE, PUESTO) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
+			query = "INSERT INTO empleado (ID, NOMBRE, APELLIDOS, SUELDO, BOSS,COD_DEPT,JEFE, PUESTO) VALUES (?, ?, ?, ?, ?, ?, ?, ?)";
 
 			try {
 
@@ -78,7 +78,6 @@ public class Consultas {
 
 			    // preparamos la consulta INSERT
 			    stmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS);
-			    // ID,Nomrbe,apellidos,sueldo,boss(id empleado),cod_dept,jefe(si/no),puesto
 			    // añadimos los valores a insertar
 
 			    

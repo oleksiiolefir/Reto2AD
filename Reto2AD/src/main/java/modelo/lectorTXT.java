@@ -25,12 +25,12 @@ public class lectorTXT {
         while (st.hasMoreTokens())
         {       	
             s2 = st.nextToken(";");
-            datos[numTokens]=s2;
+            
+           datos[numTokens]=s2;
             numTokens++;
+            s2 = br.readLine();
             //System.out.println ("    Palabra " + numTokens + " es: " + s2);
         }
-
-
 		return datos;
 		
 	}

@@ -18,7 +18,7 @@ public class launcher {
 		Consultas consult = new Consultas(c);
 		
 	//	lecturaCSV.funcionesDeLectorCsv(archivoCsv);
-
+		
 		String [] datos1 = modelo.lectorTXT.lecturaTXT();
 
 		for (int i = 0; i < datos1.length; ++i) {
@@ -36,9 +36,9 @@ public class launcher {
 		emple.setJefe(Boolean.parseBoolean(datos1[6]));
 		emple.setPuesto(datos1[7]);
 		
-		System.out.println("El empleado tine "+ emple.getNombre()+ emple.getId()+" "+emple.getSueldo()+" "+emple.getJefe() +" "+emple.getCod_dept());
 		
-		consult.insertarEmpleados(emple);
+		
+		//consult.insertarEmpleados(emple);
 
 	}
 
