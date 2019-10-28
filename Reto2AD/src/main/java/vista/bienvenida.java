@@ -2,12 +2,19 @@ package vista;
 
 import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JButton;
 
-public class bienvenida {
+public class bienvenida extends JPanel {
+	public bienvenida() {
+		setLayout(null);
+		
+		JButton btnBienvenida = new JButton("BIENVENIDA");
+		btnBienvenida.setBounds(163, 134, 111, 23);
+		add(btnBienvenida);
+	}
 
-	private JFrame frame;
+	private JPanel jpanel;
 
 	/**
 	 * Launch the application.
@@ -17,7 +24,7 @@ public class bienvenida {
 			public void run() {
 				try {
 					bienvenida window = new bienvenida();
-					window.frame.setVisible(true);
+					window.jpanel.setVisible(true);
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
@@ -25,24 +32,6 @@ public class bienvenida {
 		});
 	}
 
-	/**
-	 * Create the application.
-	 */
-	public bienvenida() {
-		initialize();
-	}
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-		
-		JLabel lblAaaaaaaaaa = new JLabel("AAAAAAAAAA");
-		lblAaaaaaaaaa.setBounds(159, 112, 135, 14);
-		frame.getContentPane().add(lblAaaaaaaaaa);
-	}
 }
+	

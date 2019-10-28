@@ -1,119 +1,96 @@
 package vista;
 
-import java.awt.EventQueue;
-
-import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.JLabel;
 import javax.swing.JTextField;
 
-public class CrearUsuario {
-
-	private JFrame frame;
-	private JTextField tfCodEmple, tfNombre, tfApellido, tfSueldo, tfDeptEmple, tfCargo, tfJefe, tfJefeAsig;
-	private JLabel lblCodigoDeEmpleado, lblNombre, lblPrimerApellido, lblSueldo, lblDepartamentoDelEmpleado, lblCargoDelEmpleado, lbltieneAAlguien, lblJefeAsignado;
-
-	/**
-	 * Launch the application.
-	 */
-	public static void main(String[] args) {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					CrearUsuario window = new CrearUsuario();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
-	}
+public class CrearUsuario extends JPanel {
+	private JTextField textField;
+	private JTextField textField_1;
+	private JTextField textField_2;
+	private JTextField textField_3;
+	private JTextField textField_4;
+	private JTextField textField_5;
+	private JTextField textField_6;
+	private JTextField textField_7;
 
 	/**
-	 * Create the application.
+	 * Create the panel.
 	 */
 	public CrearUsuario() {
-		initialize();
-	}
+		setLayout(null);
+		
+		JLabel label = new JLabel("Codigo de empleado: ");
+		label.setBounds(25, 30, 137, 19);
+		add(label);
+		
+		JLabel label_1 = new JLabel("Nombre: ");
+		label_1.setBounds(25, 60, 137, 19);
+		add(label_1);
+		
+		JLabel label_2 = new JLabel("Primer apellido: ");
+		label_2.setBounds(25, 90, 137, 19);
+		add(label_2);
+		
+		JLabel label_3 = new JLabel("Sueldo: ");
+		label_3.setBounds(25, 120, 137, 19);
+		add(label_3);
+		
+		JLabel label_4 = new JLabel("Departamento del empleado: ");
+		label_4.setBounds(25, 150, 153, 19);
+		add(label_4);
+		
+		JLabel label_5 = new JLabel("Cargo del empleado: ");
+		label_5.setBounds(25, 180, 137, 19);
+		add(label_5);
+		
+		JLabel label_6 = new JLabel("\u00BFTiene a alguien a cargo? (Si/No)");
+		label_6.setBounds(25, 210, 164, 19);
+		add(label_6);
+		
+		textField = new JTextField();
+		textField.setColumns(10);
+		textField.setBounds(260, 29, 120, 19);
+		add(textField);
+		
+		textField_1 = new JTextField();
+		textField_1.setColumns(10);
+		textField_1.setBounds(260, 59, 120, 19);
+		add(textField_1);
+		
+		textField_2 = new JTextField();
+		textField_2.setColumns(10);
+		textField_2.setBounds(260, 89, 120, 19);
+		add(textField_2);
+		
+		textField_3 = new JTextField();
+		textField_3.setColumns(10);
+		textField_3.setBounds(260, 119, 120, 19);
+		add(textField_3);
+		
+		textField_4 = new JTextField();
+		textField_4.setColumns(10);
+		textField_4.setBounds(260, 149, 120, 19);
+		add(textField_4);
+		
+		textField_5 = new JTextField();
+		textField_5.setColumns(10);
+		textField_5.setBounds(260, 179, 120, 19);
+		add(textField_5);
+		
+		textField_6 = new JTextField();
+		textField_6.setColumns(10);
+		textField_6.setBounds(260, 209, 120, 19);
+		add(textField_6);
+		
+		JLabel label_7 = new JLabel("Jefe asignado: ");
+		label_7.setBounds(25, 241, 164, 19);
+		add(label_7);
+		
+		textField_7 = new JTextField();
+		textField_7.setColumns(10);
+		textField_7.setBounds(260, 240, 120, 19);
+		add(textField_7);
 
-	/**
-	 * Initialize the contents of the frame.
-	 */
-	private void initialize() {
-		frame = new JFrame();
-		frame.setBounds(100, 100, 450, 300);
-		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		frame.getContentPane().setLayout(null);
-		
-		lblCodigoDeEmpleado = new JLabel("Codigo de empleado: ");
-		lblCodigoDeEmpleado.setBounds(10, 12, 137, 19);
-		frame.getContentPane().add(lblCodigoDeEmpleado);
-		
-		lblNombre = new JLabel("Nombre: ");
-		lblNombre.setBounds(10, 42, 137, 19);
-		frame.getContentPane().add(lblNombre);
-		
-		lblPrimerApellido = new JLabel("Primer apellido: ");
-		lblPrimerApellido.setBounds(10, 72, 137, 19);
-		frame.getContentPane().add(lblPrimerApellido);
-		
-		lblSueldo = new JLabel("Sueldo: ");
-		lblSueldo.setBounds(10, 102, 137, 19);
-		frame.getContentPane().add(lblSueldo);
-		
-		lblDepartamentoDelEmpleado = new JLabel("Departamento del empleado: ");
-		lblDepartamentoDelEmpleado.setBounds(10, 132, 153, 19);
-		frame.getContentPane().add(lblDepartamentoDelEmpleado);
-		
-		lblCargoDelEmpleado = new JLabel("Cargo del empleado: ");
-		lblCargoDelEmpleado.setBounds(10, 162, 137, 19);
-		frame.getContentPane().add(lblCargoDelEmpleado);
-		
-		lbltieneAAlguien = new JLabel("\u00BFTiene a alguien a cargo? (Si/No)");
-		lbltieneAAlguien.setBounds(10, 192, 164, 19);
-		frame.getContentPane().add(lbltieneAAlguien);
-		
-		tfCodEmple = new JTextField();
-		tfCodEmple.setBounds(245, 11, 120, 19);
-		frame.getContentPane().add(tfCodEmple);
-		tfCodEmple.setColumns(10);
-		
-		tfNombre = new JTextField();
-		tfNombre.setColumns(10);
-		tfNombre.setBounds(245, 41, 120, 19);
-		frame.getContentPane().add(tfNombre);
-		
-		tfApellido = new JTextField();
-		tfApellido.setColumns(10);
-		tfApellido.setBounds(245, 71, 120, 19);
-		frame.getContentPane().add(tfApellido);
-		
-		tfSueldo = new JTextField();
-		tfSueldo.setColumns(10);
-		tfSueldo.setBounds(245, 101, 120, 19);
-		frame.getContentPane().add(tfSueldo);
-		
-		tfDeptEmple = new JTextField();
-		tfDeptEmple.setColumns(10);
-		tfDeptEmple.setBounds(245, 131, 120, 19);
-		frame.getContentPane().add(tfDeptEmple);
-		
-		tfCargo = new JTextField();
-		tfCargo.setColumns(10);
-		tfCargo.setBounds(245, 161, 120, 19);
-		frame.getContentPane().add(tfCargo);
-		
-		tfJefe = new JTextField();
-		tfJefe.setColumns(10);
-		tfJefe.setBounds(245, 191, 120, 19);
-		frame.getContentPane().add(tfJefe);
-		
-		lblJefeAsignado = new JLabel("Jefe asignado: ");
-		lblJefeAsignado.setBounds(10, 223, 164, 19);
-		frame.getContentPane().add(lblJefeAsignado);
-		
-		tfJefeAsig = new JTextField();
-		tfJefeAsig.setColumns(10);
-		tfJefeAsig.setBounds(245, 222, 120, 19);
-		frame.getContentPane().add(tfJefeAsig);
 	}
 }

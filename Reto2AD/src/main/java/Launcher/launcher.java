@@ -38,7 +38,7 @@ public class launcher {
 		
 		
 		
-		//consult.insertarEmpleados(emple);
+		consult.insertarEmpleados(emple);
 
 	}
 

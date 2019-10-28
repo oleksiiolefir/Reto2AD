@@ -11,7 +11,7 @@ public class lectorTXT {
 		String s1;
         String s2;
         String[] datos = new String[8];
-        
+        String linea;
         // Cargamos el buffer con el contenido del archivo
         BufferedReader br = new BufferedReader (new FileReader ("datos.txt"));
  
@@ -30,6 +30,9 @@ public class lectorTXT {
             numTokens++;
             s2 = br.readLine();
             //System.out.println ("    Palabra " + numTokens + " es: " + s2);
+        }
+        while((linea=br.readLine())!=null) {
+            System.out.println(linea);
         }
 		return datos;
 		
